@@ -1,4 +1,4 @@
-# group-project-3
+# BarkBook
 
 ## Description
 
