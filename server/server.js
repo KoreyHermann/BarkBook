@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const fileUpload = require('express-fileupload');
-const path = require('path');
 
 const app = express();
 
@@ -15,18 +13,8 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-app.use(fileUpload());
+app.use(express.json());
 
-const petSchema = new mongoose.Schema({
-  name: String,
-  breed: String,
-  age: Number,
-  gender: String,
-  photo: String,
-});
-const Pet = mongoose.model('Pet', petSchema);
-
-app.post('/api/pets', (req, res) => {
-  if (!req.files || !req.files.photo) {
-    return res.status(400).json({ error: 'No photo uploaded'})}
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
