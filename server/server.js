@@ -35,7 +35,7 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
-=======
+
 const mongoose = require('mongoose');
 
 const { typeDefs, resolvers } = require('./schemas');
@@ -78,9 +78,11 @@ const startApolloServer = async (typeDefs, resolvers) => {
   
 // Call the async function to start the server
   startApolloServer(typeDefs, resolvers);
-=======
+
 app.use(express.json());
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+
+
