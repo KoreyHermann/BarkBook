@@ -20,9 +20,3 @@ router.route('/me').get(authMiddleware, getSingleUser);
 router.route('/books/:bookId').delete(authMiddleware, deleteBook);
 
 module.exports = router;
-
-
-// Add PetFinder and Google Maps API here 
-// Google Maps API key: AIzaSyBTEOgoqNJTmGf3GoZvmoqsn-aGeXGJJ4w
-
-// PetFinder API key: KV2B1RCxnppH4oILxDdjvLyJGZ6QCVrTiOcoY14O24mLkNXlJV 
