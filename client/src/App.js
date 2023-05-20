@@ -18,7 +18,7 @@ function App() {
           <Route path="/health-tracking" component={HealthTracking} />
           <Route path="/pet-services" component={PetServices} />
           <Route path="/adoption" component={Adoption} />
-          {/* home will swtich to social when logged in*/}
+          {/* home will switch to social when logged in */}
         </Switch>
       </div>
     </Router>
