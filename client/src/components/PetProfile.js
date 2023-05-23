@@ -30,7 +30,7 @@ function PetProfile() {
   };
 
   return (
-    <div>
+    <div id = 'PetProfile'>
       <h1>Pet Profile</h1>
       <form onSubmit={handleSubmit}>
         <label>

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function PetServices() {
   return (
-    <div>
+    <div id = 'pet-services'>
       <h1>Pet Services Directory</h1>
     </div>
   );

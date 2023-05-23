@@ -10,23 +10,36 @@ import Adoption from './components/Adoption';
 function App() {
  
   return (
-    <h1>
-      hello world
-    </h1>
-    // <Router>
-    //   <div>
-    //     <Navbar />
-    //     {/* <Switch> */}
-    //       <Route exact path="/PetProfile" component={PetProfile} />
-    //       <Route path="/social" component={Social} />
-    //       <Route path="/health-tracking" component={HealthTracking} />
-    //       <Route path="/pet-services" component={PetServices} />
-    //       <Route path="/adoption" component={Adoption} />
-    //       {/* home will switch to social when logged in */}
-    //     {/* </Switch> */}
-    //   </div>
-    // </Router>
+    <div>
+      <Navbar />
+      <main>
+        <Adoption />
+        <PetServices />
+        <PetProfile />
+      </main>
+    </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+// <Router>
+//   <div>
+//     <Navbar />
+//     {/* <Switch> */}
+//       <Route exact path="/PetProfile" component={PetProfile} />
+//       <Route path="/social" component={Social} />
+//       <Route path="/health-tracking" component={HealthTracking} />
+//       <Route path="/pet-services" component={PetServices} />
+//       <Route path="/adoption" component={Adoption} />
+//       {/* home will switch to social when logged in */}
+//     {/* </Switch> */}
+//   </div>
+// </Router>

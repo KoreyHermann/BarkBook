@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function Adoption() {
   return (
-    <div>
+    <div id = 'adoption'>
       <h1>Adoption</h1>
     </div>
   );
