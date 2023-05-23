@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-function HealthTracking() {
-  return (
-    <div>
-      <h1>Health Tracking</h1>
-    </div>
-  );
-}
+// function HealthTracking() {
+//   return (
+//     <div>
+//       <h1>Health Tracking</h1>
+//     </div>
+//   );
+// }
 
-export default HealthTracking;
+// export default HealthTracking;

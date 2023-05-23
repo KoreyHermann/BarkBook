@@ -5,14 +5,14 @@ function Navbar() {
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/pet-profile">Pet Profile</Link>
+      <li>
+          <Link to="/SignupForm">Sign Up</Link>
         </li>
         <li>
-          <Link to="/social">Social</Link>
+          <Link to="/PetProfile">Pet Profile</Link>
         </li>
         <li>
-          <Link to="/health-tracking">Health</Link>
+          <Link to="/Social">Social</Link>
         </li>
         <li>
           <Link to="/pet-services">Pet Services</Link>
