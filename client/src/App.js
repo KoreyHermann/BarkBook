@@ -1,17 +1,37 @@
-import React from 'react';
-import { BrowserRouter as Router,  Route } from 'react-router-dom'; // add Switch // 
+import React, { useState } from 'react';
+// import { BrowserRouter as Router,  Route } from 'react-router-dom'; // add Switch // 
 import Navbar from './components/Navbar';
 import PetProfile from './components/PetProfile';
-import Social from './components/Social';
-import HealthTracking from './components/HealthTracking';
 import PetServices from './components/PetServices';
 import Adoption from './components/Adoption';
+import SignupForm from './components/SignupForm.js'
 
 function App() {
- 
+
+  const [currentTab, setCurrentTab] = useState("SignupForm");
+
+  const renderTab = () => {
+    if (currentTab === "SignupForm") {
+      return <SignupForm />;
+    }
+    if (currentTab === "Adoption") {
+      return <Adoption />;
+    }
+    if (currentTab === "PetServices") {
+      return <PetServices />;
+    }
+    if (currentTab === "PetProfile") {
+      return <PetProfile />;
+    }
+    return <SignupForm />;
+  };
+  const handleTabChange = (page) => setCurrentTab(
+    page
+  )
+
   return (
     <div>
-      <Navbar />
+      <Navbar currentTab={currentTab} handleTabChange={handleTabChange} />
       <main>
         <Adoption />
         <PetServices />
