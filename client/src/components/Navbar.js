@@ -1,36 +1,45 @@
 import React from 'react';
 import '../assets/Navbar.css';
 
-function Navbar({ currentTab, handleTabChange }) {
+function Navbar({ isLoggedIn, username, activeTab, handleTabChange, handleLogout }) {
   return (
     <nav className="navbar">
       <div className="navbar-left">BarkBook</div>
       <div className="navbar-right">
-        <a
-          href="#SignupForm"
-          onClick={() => handleTabChange('SignupForm')}
-          className={currentTab === 'SignupForm' ? 'nav-link active' : 'nav-link'}
-        >
-          Sign Up
-        </a>
+        {isLoggedIn && (
+          <>
+            <a className="nav-link" href="#SignupForm" onClick={() => handleTabChange('SignupForm')}>
+              {username}
+            </a>
+          </>
+        )}
+        {!isLoggedIn && (
+          <a
+            href="#SignupForm"
+            onClick={() => handleTabChange('SignupForm')}
+            className={`nav-link ${activeTab === 'SignupForm' ? 'active' : ''}`}
+          >
+            Sign Up
+          </a>
+        )}
         <a
           href="#Adoption"
           onClick={() => handleTabChange('Adoption')}
-          className={currentTab === 'Adoption' ? 'nav-link active' : 'nav-link'}
+          className={`nav-link ${activeTab === 'Adoption' ? 'active' : ''}`}
         >
           Adoption
         </a>
         <a
           href="#PetServices"
           onClick={() => handleTabChange('PetServices')}
-          className={currentTab === 'PetServices' ? 'nav-link active' : 'nav-link'}
+          className={`nav-link ${activeTab === 'PetServices' ? 'active' : ''}`}
         >
           Pet Services
         </a>
         <a
           href="#PetProfile"
           onClick={() => handleTabChange('PetProfile')}
-          className={currentTab === 'PetProfile' ? 'nav-link active' : 'nav-link'}
+          className={`nav-link ${activeTab === 'PetProfile' ? 'active' : ''}`}
         >
           Pet Profile
         </a>
@@ -40,3 +49,4 @@ function Navbar({ currentTab, handleTabChange }) {
 }
 
 export default Navbar;
+
